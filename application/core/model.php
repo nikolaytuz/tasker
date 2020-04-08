@@ -2,19 +2,17 @@
 
 class Model
 {
-	
-	/*
-		Модель обычно включает методы выборки данных, это могут быть:
-			> методы нативных библиотек pgsql или mysql;
-			> методы библиотек, реализующих абстракицю данных. Например, методы библиотеки PEAR MDB2;
-			> методы ORM;
-			> методы для работы с NoSQL;
-			> и др.
-	*/
+	protected $db;
 
+	public function __construct() {
+		$this->db = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
+		if (mysqli_connect_errno()) {
+    	echo "Не удалось подключиться к MySQL: " . mysqli_connect_error();
+		}
+
+	}
 	// метод выборки данных
-	public function get_data()
-	{
-		// todo
+	public function get_data(){
+
 	}
 }

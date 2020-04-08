@@ -1,4 +1,1 @@
-<h1>404</h1>
-<p>
-<img src="/images/404.png">
-</p>
+<h1 class="text-center mt-5">404</h1>
